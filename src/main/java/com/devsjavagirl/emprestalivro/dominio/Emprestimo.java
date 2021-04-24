@@ -15,27 +15,13 @@ public class Emprestimo {
     @ManyToOne
     private Livro livro;
 
-    public Long getCodigo() {
-        return codigo;
+    @Deprecated
+    public Emprestimo() {
     }
 
-    public void setCodigo(Long codigo) {
-        this.codigo = codigo;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
+    public Emprestimo(Usuario usuario, Livro livro) {
         this.usuario = usuario;
-    }
-
-    public Livro getLivro() {
-        return livro;
-    }
-
-    public void setLivro(Livro livro) {
         this.livro = livro;
     }
+
 }
